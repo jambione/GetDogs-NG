@@ -1,0 +1,23 @@
+<html ng-app="main">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+        <script src="main.module.js"></script>
+        <script src="main.controller.js"></script>
+        <script src="main.service.js"></script>
+    </head>
+    <body ng-controller="mainController">
+            <div>
+                <label>Name:</label>
+                <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                <hr>
+                <h1>Hello {{yourName}}!</h1>
+            </div>
+            <div>
+                <input type="button" ng-click="getDogPicture()" value="get Dogs">
+                <img ng-src="{{dog}}"/>
+            </div>
+
+    </body>
+
+</html>
